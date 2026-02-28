@@ -27,6 +27,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": "/src",
+      "@convex": "/convex/_generated",
     },
   },
   // Optimize for WebContainer environment
