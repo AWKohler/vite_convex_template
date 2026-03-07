@@ -17,7 +17,9 @@ createRoot(document.getElementById('root')!).render(
 )
 
 // ============================================================================
-// Debug: Forward iframe console and Vite HMR status to parent window
+// DO NOT REMOVE: Debug infrastructure for parent window communication
+// This forwards console logs, errors, and HMR events to the parent IDE.
+// Without this, the agent's getBrowserLog tool will not work.
 // ============================================================================
 if (typeof window !== 'undefined' && window.parent !== window) {
   // Forward console messages to parent
